@@ -6,7 +6,8 @@ services:
     image: mongo:3.2.3
     volumes:
       - ./data:/data/db
-      - ./mongodb_backup/leanote_install_data:/init_data
+      - ./backup:/backup
+      - ./conf/mongodb_backup/leanote_install_data:/init_data
 
   server:
     environment:
